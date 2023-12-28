@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seize the ads</title>
+    <link rel="stylesheet" href="css/portfolio-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz@9..40&family=Lato:ital@1&family=Poppins:wght@200;300;400;600;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="header">
+        <a class="logo" href="#"><img src="image/Group 1000006598.jpg"></a>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="#" style="--i:0;">Home</a>
+            <a href="aboutus.html" style="--i:1;">About Us</a>
+            <div class="dropdown-container" onclick="toggleDropdown()">
+
+                <a href="#" style="--i:2;" class="dropdown-button">Services<i class='bx bx-chevron-down'></i></a>
+                <div class="dropdown-content">
+                    <a href="SEO.html">SEO Services</a>
+                    <a href="socialMediaMarketing.html">Social Media Marketing</a>
+                    <a href="performanceMarketing.html">Performance Marketing</a>
+                    <a href="creativeServices.html">Creative Services</a>
+
+                </div>
+            </div>
+            <a href="portfolio.html" style="--i:3;">Portfolio</a>
+            <a href="#" style="--i:4;">Contact Us</a>
+
+        </nav>
+    </header>
+
+
+    <!-- portfolio -->
+    <section id="portfolio">
+        <div class="portfolio-div">
+            <h1>PORTFOLIO</h1>
+            <div class="portfolio-sub">
+                <h4>ALL</h4>
+                <h4>SOCIAL MEDIA</h4>
+                <h4>MOTION DESIGN</h4>
+                <h4>GRAPHICS DESIGN</h4>
+
+            </div>
+            <div class="portfolio-img-column">
+                <div class="portfolio-img-row">
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+
+                </div>
+                <div class="portfolio-img-row">
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+                </div>
+                <div class="portfolio-img-row">
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+                </div>
+                <div class="portfolio-img-row">
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+                </div>
+                <div class="portfolio-img-row">
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+                    <div class="image-container">
+                        <img class="default-image" src="image/portfolio-before.png" alt="Default Image">
+                        <img class="hover-image" src="image/portfolio-after.png" alt="Hover Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Footer -->
+    <iframe src="/includes/footer.html" width="100%" height="448px" frameborder="0"></iframe>
+<!-- NavBar dropdown -->
+<script>
+    function toggleDropdown() {
+        var dropdownContainer = document.querySelector('.dropdown-container');
+        dropdownContainer.classList.toggle('active');
+    }
+
+    // service Card
+    function toggleCard(card) {
+        // Toggle the 'expanded' class on the clicked card
+        card.classList.toggle('expanded');
+
+        // Close other expanded cards
+        document.querySelectorAll('.card').forEach(function (otherCard) {
+            if (otherCard !== card && otherCard.classList.contains('expanded')) {
+                otherCard.classList.remove('expanded');
+            }
+        });
+    }
+
+    function handleButtonClick(button) {
+        // Handle the button click action here
+        alert('Button clicked!');
+    }
+</script>
+
+</body>
+
+</html>

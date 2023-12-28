@@ -1,0 +1,709 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+/* Navbar */
+
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    padding: 1.3rem 10%;
+
+    box-shadow: 6px 6px 6px rgba(147, 147, 147, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #FFFFFF, transparent);
+    transition: .5s;
+}
+
+.header:hover::after {
+    left: 100%;
+}
+
+.logo {
+    width: 143px;
+    height: 76px;
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    color: rgba(30, 30, 30, 1);
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 2.5rem;
+}
+
+.navbar a:hover {
+    color: #5D70D6;
+    text-decoration: underline;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: rgba(30, 30, 30, 1);
+    cursor: pointer;
+    display: none;
+}
+
+/* Style the button and dropdown container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E2E5F5;
+
+    width: 263.08px;
+    height: 170px;
+    z-index: 1;
+    border-radius: 4px;
+
+}
+
+/* Style the dropdown links inside the container */
+.dropdown-content a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    size: 20px;
+    color: #4D4D4D;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    color: #5D70D6;
+    text-decoration: underline;
+}
+
+/* Show the dropdown content when the button is clicked */
+.dropdown-container.active .dropdown-content {
+    display: block;
+}
+
+
+
+/* PM Heading */
+#pm-heading {
+    width: 100%;
+    height: auto;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 5%;
+    background: linear-gradient(135deg, rgb(35, 45, 131), rgb(61, 34, 125), rgb(121, 35, 130));
+    display: flex;
+    flex-direction: column;
+
+    gap: 2%;
+    text-transform: uppercase;
+}
+
+#pm-heading h2 {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 96px;
+}
+
+#pm-heading button {
+    width: 505.67px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 3px solid transparent;
+    background: linear-gradient(135deg, rgb(35, 45, 131), rgb(61, 34, 125)) padding-box,
+    linear-gradient(to right, rgb(91, 79, 192), rgb(187, 187, 198)) border-box;
+    border-radius: 12px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 72px;
+
+
+
+}
+
+#pm-heading button:hover {
+    cursor: pointer;
+    background: rgb(93, 112, 214);
+
+}
+
+/* why-pm */
+
+#why-pm {
+    width: 100%;
+    height: auto;
+    padding: 3%;
+
+}
+
+#why-pm h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.blue-word {
+    color: #5D70D6;
+}
+
+.black-word {
+    color: #1E1E1E;
+}
+
+.why-pm-cards {
+    display: flex;
+    justify-content: center;
+
+}
+
+.why-pm-card-content {
+    background: #DDDDDD;
+    border-radius: 12px;
+    ;
+    margin: 2%;
+    padding: 2%;
+    width: 360px;
+    height: 291px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-pm-card-content h6 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.why-pm-card-content li {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+/* Services we Offer */
+#services-offer {
+    background: #E2E5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 4%;
+}
+
+#services-offer h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.services-offer-cards {
+    display: flex;
+
+    gap: 8%;
+    margin: 3%;
+
+}
+
+.services-offer-card-body {
+    background: white;
+    width: 256px;
+    height: 341px;
+    border-radius: 10px;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+
+}
+
+.services-offer-card-body h5 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #1E1E1E;
+    margin-top: 4%;
+    margin-bottom: 6%;
+
+}
+
+.services-offer-card-body li {
+    font-weight: lighter;
+    font-size: 16px;
+    color: #4D4D4D;
+    line-height: 33.5px;
+}
+
+/* Industries we cater */
+#we-cater {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#we-cater h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    font-size: 64px;
+    color: #1E1E1E;
+}
+
+.we-cater-cards {
+    display: flex;
+
+    gap: 8%;
+    margin: 3%;
+
+}
+
+.we-cater-card-content {
+    border: 1px solid;
+    width: 246px;
+    height: 299px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    gap: 2%;
+}
+
+
+
+.we-cater-card-content h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: #1E1E1E;
+}
+
+.we-cater-card-content p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21.5px;
+    color: #1E1E1E;
+}
+
+.we-cater-blue-bottom {
+    width: 100%;
+    height: auto;
+    background: #E2E5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+
+}
+
+.we-cater-blue-bottom h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    font-weight: bold;
+    color: #4D4D4D;
+    margin-bottom: 3%;
+}
+
+.we-cater-blue-bottom div {
+    color: white;
+    background: #5D70D6;
+    width: 365px;
+    height: 66px;
+    gap: 2%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+/* FAQ */
+
+#FAQ {
+    width: 100%;
+    height: auto;
+    background: #1E1E1E;
+    color: #FFFFFF;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#FAQ h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 72px;
+    margin-bottom: 5%;
+}
+
+.accordion {
+    background-color: transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border-radius: 2%;
+    border: 1px solid;
+    border-image: linear-gradient(to top, rgb(80, 80, 80), white);
+    border-image-slice: 1;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: transparent;
+}
+
+.accordion:after {
+    content: '\02C4';
+    /* Unicode character for Modifier Letter Up Arrowhead */
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: '\02C5';
+    /* Unicode character for Modifier Letter Down Arrowhead */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-button {
+    margin-bottom: 2%;
+    width: 1080px;
+    height: 80px;
+
+}
+
+
+
+
+
+
+
+
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(93, 112, 214, 0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 .5rem 1rem rgba(234, 237, 255, 1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        color: gray;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+
+    .dropdown-container {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #E2E5F5;
+        z-index: 1;
+        border-radius: 4px;
+    }
+
+    .dropdown-container.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+        /* Adjust the font size as needed */
+        color: #4D4D4D;
+        padding: 10px 14px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* PM Heading */
+    #pm-heading h2 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    #pm-heading button {
+        width: 100%;
+    }
+
+    /* Why pm */
+
+    .why-pm-card-content {
+        width: 100%;
+    }
+
+    .why-pm-cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+    }
+
+    /* SERVICES WE OFFER */
+    .services-offer-card-body {
+        width: 100%;
+    }
+
+    .services-offer-cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+    }
+
+    .services-offer-card-body {
+        width: 286px;
+
+
+    }
+
+    /* Industries we cater */
+    #we-cater h2 {
+        font-size: 40px;
+    }
+
+    .we-cater-card-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .we-cater-blue-bottom div {
+        width: 100%;
+    }
+
+    /* FAQ */
+
+    .accordion-button {
+        width: 90%;
+        /* Adjust width for smaller screens */
+    }
+}
+
+/* Media Query for Phones and smaller screens */
+@media only screen and (max-width: 480px) {
+
+    /* PM Heading */
+
+    #pm-heading h2 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+
+    #pm-heading button {
+        font-size: 24px;
+        line-height: 48px;
+    }
+
+    /* why Pm */
+    .why-pm-card-content {
+        width: 100%;
+    }
+
+    .why-pm-card-content h6 {
+        font-size: 20px;
+    }
+
+    .why-pm-card-content li {
+        font-size: 16px;
+    }
+
+    .why-pm-cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+    }
+
+    /* SERVICES WE OFFER */
+    .services-offer-cards {
+        gap: 4%;
+    }
+
+    .services-offer-card-body {
+        width: 100%;
+    }
+
+    #services-offer h3 {
+        font-size: 30px;
+    }
+
+    .services-offer-card-body h5 {
+        font-size: 16px;
+        margin-bottom: 4%;
+    }
+
+    .services-offer-card-body li {
+        font-size: 14px;
+    }
+
+    .services-offer-cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+    }
+
+    /* Industries we cater */
+
+    #we-cater h2 {
+        font-size: 30px;
+    }
+
+    .we-cater-card-content {
+        width: 100%;
+
+    }
+
+
+
+    .we-cater-blue-bottom h4 {
+        font-size: 40px;
+    }
+
+    .we-cater-blue-bottom div {
+        width: 100%;
+    }
+}

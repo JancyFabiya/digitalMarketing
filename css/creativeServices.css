@@ -1,0 +1,913 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+/* Navbar */
+
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    padding: 1.3rem 10%;
+
+    box-shadow: 6px 6px 6px rgba(147, 147, 147, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #FFFFFF, transparent);
+    transition: .5s;
+}
+
+.header:hover::after {
+    left: 100%;
+}
+
+.logo {
+    width: 143px;
+    height: 76px;
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    color: rgba(30, 30, 30, 1);
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 2.5rem;
+}
+
+.navbar a:hover {
+    color: #5D70D6;
+    text-decoration: underline;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: rgba(30, 30, 30, 1);
+    cursor: pointer;
+    display: none;
+}
+
+/* Style the button and dropdown container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E2E5F5;
+
+    width: 263.08px;
+    height: 170px;
+    z-index: 1;
+    border-radius: 4px;
+
+}
+
+/* Style the dropdown links inside the container */
+.dropdown-content a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    size: 20px;
+    color: #4D4D4D;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    color: #5D70D6;
+    text-decoration: underline;
+}
+
+/* Show the dropdown content when the button is clicked */
+.dropdown-container.active .dropdown-content {
+    display: block;
+}
+
+/* PM Heading */
+#cs-heading {
+    width: 100%;
+    height: auto;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 5%;
+    background: linear-gradient(135deg, rgb(35, 45, 131), rgb(61, 34, 125), rgb(121, 35, 130));
+    display: flex;
+    flex-direction: column;
+
+    gap: 2%;
+    text-transform: uppercase;
+}
+
+#cs-heading h2 {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 96px;
+}
+
+#cs-heading button {
+    width: 245px;
+    height: 96px;
+  
+    gap: 15px;
+    /* background: transparent;
+    border-width: 3px;
+
+    border-image: linear-gradient(to right, rgb(91, 79, 192), rgb(187, 187, 198));
+    border-image-slice: 1; */
+    border: 3px solid transparent;
+    background: linear-gradient(135deg, rgb(35, 45, 131), rgb(61, 34, 125)) padding-box,
+    linear-gradient(to right, rgb(91, 79, 192), rgb(187, 187, 198)) border-box;
+    border-radius: 12px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 72px;
+
+
+
+}
+
+#cs-heading button:hover {
+    cursor: pointer;
+    background: rgb(93, 112, 214);
+
+}
+
+/* OUR WORK */
+#our-work {
+    width: 100%;
+    height: auto;
+    background: #E2E5F5;
+}
+
+
+.our-work-first-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+
+
+    /* flex-direction: column; */
+}
+
+.our-work-first-row h2 {
+    font-size: 80px;
+    color: #4D4D4D;
+    margin-bottom: 20px;
+}
+
+.our-work-first-row span {
+    font-size: 25px;
+    font-weight: bold;
+    color: #1E1E1E;
+    margin-top: 45px;
+}
+
+.our-work-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    margin-bottom: 4%;
+}
+
+.our-work-bottom {
+    background: white;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-work-bottom h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #4D4D4D;
+}
+
+.our-work-bottom button {
+    width: 191px;
+    height: 56px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: #5D70D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 2%;
+}
+.our-work-bottom span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Creative services for you */
+
+#creative-services {
+    width: 100%;
+    height: auto;
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4%;
+}
+
+#creative-services h3 {
+    font-family: 'BebasNeue', sans-serif;
+    font-weight: lighter;
+    font-size: 64px;
+    color: #4D4D4D;
+}
+
+.icon-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+}
+
+.icon-set span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 25px;
+    margin-top: 4%;
+}
+
+.creative-services-icons {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 6%;
+    padding: 4%;
+
+
+}
+
+
+/* Our Clients */
+#clients {
+    background-color: #F5F5F5;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 40px;
+}
+
+.client {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.client h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    color: #4D4D4D;
+    margin-bottom: 20px;
+
+}
+
+.image-row {
+    display: flex;
+
+    justify-content: center;
+    gap: 56px;
+    /* Adjust the gap between images */
+    margin-bottom: 20px;
+}
+
+.image-row img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.client-image-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+/* Works Counter */
+
+#works-counter {
+    width: 100%;
+    height: auto;
+    background: #1E1E1E;
+    padding: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.works-number-set {
+    display: flex;
+    gap: 2%;
+}
+
+.number-set h3,
+span {
+    color: #5D70D6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight: bolder;
+    line-height: 72px;
+
+}
+
+.number-set h6 {
+    color: #D8DEFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+/* testimonials  */
+#testimonials {
+    width: 100%;
+    height: auto;
+    background: #DDDDDD;
+
+}
+
+#testimonials h2 {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 76px;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 5%;
+    color: #1E1E1E;
+}
+
+.testimonials-card-content {
+    width: 100%;
+    max-width: 607px;
+    height: 336px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1E1E1E;
+
+    padding: 4%;
+    margin-bottom: 3%;
+    position: relative;
+    /* Added position relative for absolute positioning */
+
+}
+
+.testimonials-cards {
+    display: flex;
+    gap: 2%;
+    margin-bottom: 4%;
+
+}
+
+.testimonials-card-content h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.testimonials-card-content h6 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #7A7A7A;
+}
+
+.testimonials-card-content p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    color: #B7B7B7;
+}
+
+.testimonials-card-content .testimonial-logo {
+    position: absolute;
+    font-size: 10rem;
+    color: #5D70D6;
+    opacity: 0.5;
+    top: 10px;
+    /* Align to the top with some padding */
+    right: 10px;
+    /* Align to the right with some padding */
+
+
+}
+
+.testimonial-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonial-title img {
+    width: 50px;
+    /* Adjust image width as needed */
+    height: 50px;
+    /* Adjust image height as needed */
+    border-radius: 50%;
+    /* Make the image round */
+    margin-right: 10px;
+}
+
+/* Bring Your Imagination */
+
+#imagination {
+    width: 100%;
+    height: auto;
+    background: #E2E5F5;
+
+    padding: 4%;
+}
+
+.imgination-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagination-col h4 {
+    color: #5D70D6;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 72px;
+}
+
+.imagination-col h6 {
+    color: #1E1E1E;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 32px;
+    line-height: 107.4%;
+}
+
+/* FAQ */
+
+#FAQ {
+    width: 100%;
+    height: auto;
+    background: #1E1E1E;
+    color: #FFFFFF;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#FAQ h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 72px;
+    margin-bottom: 5%;
+}
+
+.accordion {
+    background-color: transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border-radius: 2%;
+    border: 1px solid;
+    border-image: linear-gradient(to top, rgb(80, 80, 80), white);
+    border-image-slice: 1;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: transparent;
+}
+
+.accordion:after {
+    content: '\02C4';
+    /* Unicode character for Modifier Letter Up Arrowhead */
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: '\02C5';
+    /* Unicode character for Modifier Letter Down Arrowhead */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-button {
+    margin-bottom: 2%;
+    width: 1080px;
+    height: 80px;
+
+}
+
+/* footer */
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(93, 112, 214, 0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 .5rem 1rem rgba(234, 237, 255, 1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        color: gray;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+
+    .dropdown-container {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #E2E5F5;
+        z-index: 1;
+        border-radius: 4px;
+    }
+
+    .dropdown-container.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+        /* Adjust the font size as needed */
+        color: #4D4D4D;
+        padding: 10px 14px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* CS Heading */
+
+    #cs-heading {
+        padding: 3%;
+        /* Adjust padding for smaller screens */
+    }
+
+    #cs-heading h2 {
+        font-size: 36px;
+        /* Adjust font size for smaller screens */
+        line-height: 56px;
+        /* Adjust line height for smaller screens */
+    }
+
+    #cs-heading button {
+        width: 100%;
+        /* Make the button full width on smaller screens */
+        max-width: 505.67px;
+        /* Limit the maximum width of the button */
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+        line-height: 48px;
+        /* Adjust line height for smaller screens */
+    }
+
+    /* Our Work */
+
+    .our-work-first-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .our-work-first-row h2 {
+        font-size: 60px;
+    }
+
+    .our-work-first-row span {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .our-work-img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our-work-img img {
+        width: 80%;
+        /* Adjust the width of the images */
+        max-width: 300px;
+        /* Set a maximum width if needed */
+        margin-bottom: 20px;
+    }
+
+    .our-work-bottom h4 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .our-work-bottom div {
+        width: 100%;
+        max-width: 221px;
+    }
+
+    /* Creative services for you */
+
+    .icon-set {
+        gap: 4%;
+    }
+
+    .icon-set span {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 2%;
+    }
+
+    /* Brands (Our Client) */
+    .image-row {
+        gap: 10px;
+        /* Adjust the gap between images for even smaller screens */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .client h2 {
+        font-size: 40px;
+        /* Adjust the font size for smaller screens */
+    }
+
+    /* work count */
+
+    #works-counter {
+        flex-direction: column;
+        /* Change to column layout on smaller screens */
+    }
+
+    .number-set {
+        flex: 0 0 100%;
+        /* Take up full width on smaller screens */
+    }
+
+    .number-set h3,
+    span {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .number-set h6 {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    /* Client Say  */
+
+    /* Apply styles for screens with a minimum width of 768px */
+    #testimonials h2 {
+        font-size: 40px;
+        line-height: 56px;
+        text-align: center;
+    }
+
+    .testimonials-card-content {
+
+        width: 100%;
+    }
+
+    .testimonial-title {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonial-title img {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    .testimonials-cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2%;
+    }
+
+    /* Bring your imagination */
+
+    .imgination-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagination-col h4 {
+        font-size: 40px;
+        line-height: 56px;
+        text-align: center;
+
+    }
+
+    .imagination-col h6 {
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+    }
+
+    /* FAQ */
+
+    #FAQ {
+        padding: 10%;
+    }
+
+    #FAQ h1 {
+        font-size: 60px;
+        line-height: 48px;
+    }
+
+    .accordion-button {
+        width: 100%;
+    }
+
+    .accordion {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .panel {
+        padding: 0 15px;
+    }
+
+    /* footer  */
+
+    @media (max-width: 768px) {
+        .iframe-container {
+            padding-top: 75%;
+            /* Adjust the aspect ratio for smaller screens if needed */
+        }
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    /* footer  */
+    .iframe-container {
+        padding-top: 100%;
+        /* Adjust the aspect ratio for even smaller screens if needed */
+    }
+}
